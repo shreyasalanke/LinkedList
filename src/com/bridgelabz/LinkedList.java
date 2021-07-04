@@ -39,4 +39,17 @@ public void add(int data)
 		}
 		System.out.println(tempNode.data);
 	}
+	public void insert(int data) {
+		MyNode newNode = new MyNode();
+		newNode.data = data;
+		newNode.next = null;
+		if(head == null) {
+			this.head = newNode;
+		}
+		else {
+			MyNode tempNode = head.next;
+			head.next = newNode;
+			newNode.next = tempNode;
+		}
+	}
 }
