@@ -10,25 +10,20 @@ public class MyNode {
 		this.data = data;
 		this.next = next;
 	}
-	public MyNode() 
-	{
+	public MyNode() {
 		super();
 	}
-	public void setData(int data)
-	{
+	public void setData(int data) {
 		this.data = data;
 	}
-	public int getData()
-	{
+	public int getData() {
 		return data;
 	}
-	public void setNext(MyNode next) 
-	{
+	public void setNext(MyNode next) {
 		this.next = next;
 	}
 	
-	public MyNode getNext() 
-	{
+	public MyNode getNext() {
 		return next;
 	}
 }

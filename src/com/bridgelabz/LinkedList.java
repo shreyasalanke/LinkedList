@@ -52,4 +52,14 @@ public void add(int data)
 			newNode.next = tempNode;
 		}
 	}
+	public void pop()
+	{
+		if (head!=null)
+		head = head.next;
+	}
+	public MyNode delete() {
+		MyNode tempNode = this.head;
+		this.head = head.next;
+		return tempNode;		
+	}
 }
