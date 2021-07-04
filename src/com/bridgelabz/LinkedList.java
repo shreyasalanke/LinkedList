@@ -20,11 +20,13 @@ public void append(int data) {
 			tempNode.next = newNode;
 		}
 	}
-	public void print() {
+	public void print()
+	{
 		MyNode tempNode = head;
-		while(tempNode.next != null) {
+		while(tempNode.next != null)
+		{
 			System.out.println(tempNode.data);
-			tempNode = tempNode.next;
+			tempNode=tempNode.next;
 		}
 		System.out.println(tempNode.data);
 	}
