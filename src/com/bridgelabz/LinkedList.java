@@ -4,22 +4,31 @@ public class LinkedList {
 	
 	MyNode head;
 	
-public void append(int data) {
-		
+public void append(int data) 
+{
 		MyNode newNode = new MyNode();
 		newNode.data = data;
 		newNode.next = null;
-		if(head == null) {
+		if(head == null) 
+		{
 			this.head = newNode;
 		}
 		else {
 			MyNode tempNode = head;
-			while(tempNode.next != null) {
+			while(tempNode.next != null) 
+			{
 				tempNode = tempNode.next;
 			}
 			tempNode.next = newNode;
 		}
 	}
+public void add(int data)
+ {
+	MyNode newNode = new MyNode();
+	newNode.data = data;
+	newNode.next = head;
+	head = newNode;
+}
 	public void print()
 	{
 		MyNode tempNode = head;
