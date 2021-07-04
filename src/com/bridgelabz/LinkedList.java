@@ -91,4 +91,26 @@ public void add(int data)
         }
 		return 0;
     }
+	public void searchNode(int data) {  
+        MyNode current = head;  
+        int x = 1;  
+        boolean flag = false;  
+        if(head == null) {  
+            System.out.println("List is empty");  
+        }  
+        else {  
+            while(current != null) {  
+                if(current.data == data) {  
+                    flag = true;  
+                    break;  
+                }  
+                x++;  
+                current = current.next;  
+            }  
+        }  
+        if(flag)  
+             System.out.println("Element is present at : " + x);  
+        else  
+             System.out.println("Element is not present in the list");  
+    }
 }
