@@ -3,6 +3,7 @@ package com.bridgelabz;
 public class LinkedList {
 	
 	MyNode head;
+	MyNode tail;
 	
 public void append(int data) 
 {
@@ -29,16 +30,7 @@ public void add(int data)
 	newNode.next = head;
 	head = newNode;
 }
-	public void print()
-	{
-		MyNode tempNode = head;
-		while(tempNode.next != null)
-		{
-			System.out.println(tempNode.data);
-			tempNode=tempNode.next;
-		}
-		System.out.println(tempNode.data);
-	}
+	
 	public void insert(int data) {
 		MyNode newNode = new MyNode();
 		newNode.data = data;
@@ -52,14 +44,51 @@ public void add(int data)
 			newNode.next = tempNode;
 		}
 	}
-	public void pop()
+	public void print()
 	{
-		if (head!=null)
-		head = head.next;
+		MyNode tempNode = head;
+		while(tempNode.next != null)
+		{
+			System.out.println(tempNode.data);
+			tempNode=tempNode.next;
+		}
+		System.out.println(tempNode.data);
 	}
-	public MyNode delete() {
-		MyNode tempNode = this.head;
-		this.head = head.next;
-		return tempNode;		
-	}
+	
+	public void insertAfter(MyNode prevNode, int value)
+	{
+
+		if (prevNode == null)
+		{
+		System.out.println("Previous Node should not be NULL");
+		return;
+		}
+		
+		MyNode newNode= new MyNode(value);
+		newNode.next = prevNode.next;
+		prevNode.next = newNode;
+		}
+	public int poplast()
+	{
+		if (head == null) 
+        {
+            System.out.println("Empty");
+        } 
+        else if (head.next == null) 
+        {
+            head = null;
+        }
+        else
+        {
+            MyNode a = head;
+            MyNode b = head;
+            while (a.next != null)
+            {
+                b = a;
+                a = a.next;
+            }
+            b.next = null;
+        }
+		return 0;
+    }
 }
